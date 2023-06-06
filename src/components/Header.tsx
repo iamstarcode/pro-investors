@@ -18,7 +18,7 @@ function Header() {
           <div className="space-y-3">
             <p className="text-lg font-bold lg:text-4xl">
               Unlock Growth Potential: Connect with Small-Budget Investors to
-              Fuel Your Business`&apos;`s Success.
+              Fuel Your Business&apos;s Success.
             </p>
             <p className="text-sm lg:text-lg">
               Our website promotes growth potential by connecting small business

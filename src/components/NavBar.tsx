@@ -32,14 +32,15 @@ const NavBar = () => {
         <div className="flex-none">
           <div className="inline-flex items-center font-medium">
             <Image
+              className="w-16 lg:w-full"
               src="/logo.png"
-              width="90"
-              height="174"
+              width="180"
+              height="132"
               alt="logo"
             />
             <p>
-              <span className="text-accent text-4xl">Pro</span>
-              <span className="text-4xl">Investors</span>
+              <span className="text-accent text-lg lg:text-4xl">Pro</span>
+              <span className="text-lg lg:text-4xl">Investors</span>
             </p>
           </div>
         </div>
