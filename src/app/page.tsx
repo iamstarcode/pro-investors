@@ -297,26 +297,26 @@ function Home() {
           <p className="text-[#282828] text-center font-bold">
             What our Happy Users are saying
           </p>
-          <div className="grid gap-3 justify-items-center grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 mt-5">
-            <div className="h-44 w-44  lg:w-52 lg:h-52 bg-i-secondary-700 relative">
+          <div className="grid gap-4 h-[300px] lg:h-56 justify-items-center grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 mt-5">
+            <div className="w-full h-full bg-i-secondary-700 relative">
               <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
                 <p>1</p>
               </div>
             </div>
 
-            <div className="h-44 w-44 lg:w-52 lg:h-52 bg-i-secondary-700 relative">
+            <div className="w-full h-full bg-i-secondary-700 relative">
               <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
                 <p>2</p>
               </div>
             </div>
 
-            <div className="h-44 w-44 lg:w-52 lg:h-52 bg-i-secondary-700 relative">
+            <div className="w-full h-full bg-i-secondary-700 relative">
               <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
                 <p>3</p>
               </div>
             </div>
 
-            <div className="h-44 w-44 lg:w-52 lg:h-52 bg-i-secondary-700 relative">
+            <div className="w-full h-full bg-i-secondary-700 relative">
               <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
                 <p>4</p>
               </div>

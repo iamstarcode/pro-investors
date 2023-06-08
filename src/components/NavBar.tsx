@@ -1,6 +1,10 @@
+'use client'
+
 import Image from "next/image";
 import CustomLink from "@/components/CustomLink";
 import Link from "next/link";
+import { useRef } from "react";
+import SignUp from "./SingUp";
 export const links = [
   {
     href: "/",
@@ -25,20 +29,25 @@ export const linksJsx = links.map((link: any, index) => (
   <CustomLink key={index} href={link.href} text={link.text} />
 ));
 const NavBar = () => {
+
+  const ref = useRef<HTMLDialogElement | null>(null)
+
   return (
     <>
+      <SignUp ref={ref} />
+
       {/* <MenuDrawer /> */}
       <div id="nav" className="navbar">
         <div className="flex-none">
           <div className="inline-flex items-center font-medium">
             <Image
-              className="w-16 lg:w-full"
+              className="w-16"
               src="/logo.png"
-              width="180"
-              height="132"
+              width="109"
+              height="78"
               alt="logo"
             />
-            <p>
+            <p onClick={() => ref?.current?.showModal()}>
               <span className="text-accent text-lg lg:text-4xl">Pro</span>
               <span className="text-lg lg:text-4xl">Investors</span>
             </p>
