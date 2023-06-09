@@ -7,7 +7,7 @@ function Home() {
         <p className="text-center text-xl font-bold text-[#282828] lg:text-4xl">
           Our Top Investors
         </p>
-        <div className="mt-8 flex flex-col space-y-7 p-6 lg:flex-row lg:space-x-10">
+        <div className="mt-8 flex flex-col space-y-7 p-4 lg:flex-row lg:space-x-10">
           <div className="relative">
             <Image
               src="/img/investor1.png"
@@ -67,9 +67,9 @@ function Home() {
           </p>
 
           <div className="">
-            <div className="flex flex-col w-full lg:relative">
+            <div className="flex w-full flex-col lg:relative">
               <div className="flex basis-4/5 flex-col lg:relative lg:max-w-3xl">
-                <p className="bg-i-secondary-700 p-6 lg:py-36 lg:pr-52 xl:py-36 xl:pr-64 text-sm xl:text-lg">
+                <p className="bg-i-secondary-700 p-6 text-sm lg:py-36 lg:pr-52 xl:py-36 xl:pr-64 xl:text-lg">
                   Tempor id eu nisl nunc mi. Sit consectetur adipiscing elit
                   duis tristique. Ut tristique et egestas quis ipsum suspendisse
                   ultrices gravida. Ac feugiat sed lectus vestibulum. Ornare
@@ -79,7 +79,7 @@ function Home() {
                 </p>
               </div>
               <div className="relative lg:absolute lg:right-0 lg:top-32 xl:right-0 xl:top-24">
-                <div className="absolute inset-0 flex w-full justify-center items-center">
+                <div className="absolute inset-0 flex w-full items-center justify-center">
                   <Image
                     src="/img/play.png"
                     width="60"
@@ -97,9 +97,9 @@ function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col w-full lg:relative mt-8 lg:mt-32">
+            <div className="mt-8 flex w-full flex-col lg:relative lg:mt-32">
               <div className="flex basis-4/5 flex-col lg:relative lg:max-w-3xl">
-                <p className="bg-i-secondary-700 p-6 lg:py-36 lg:pr-52 xl:py-36 xl:pr-64 text-sm xl:text-lg">
+                <p className="bg-i-secondary-700 p-6 text-sm lg:py-36 lg:pr-52 xl:py-36 xl:pr-64 xl:text-lg">
                   Tempor id eu nisl nunc mi. Sit amet consectetur adipiscing
                   elit duis tristique. Ut tristique et egestas quis ipsum
                   suspendisse ultrices gravida. Ac feugiat sed lectus
@@ -110,7 +110,7 @@ function Home() {
                 </p>
               </div>
               <div className="relative lg:absolute lg:right-0 lg:top-32 xl:right-0 xl:top-24">
-                <div className="absolute inset-0 flex w-full justify-center items-center">
+                <div className="absolute inset-0 flex w-full items-center justify-center">
                   <Image
                     src="/img/play.png"
                     width="60"
@@ -133,7 +133,7 @@ function Home() {
 
       <div className="mx-auto w-full max-w-7xl p-4">
         {/* Insight */}
-        <div className="flex lg:space-x-16 space-x-4 mt-8 lg:mx-auto lg:max-w-3xl">
+        <div className="mt-8 flex space-x-4 lg:mx-auto lg:max-w-3xl lg:space-x-16">
           <div className="basis-1/2">
             <Image
               src="/img/pictogram.png"
@@ -144,10 +144,10 @@ function Home() {
           </div>
 
           <div className="basis-1/2">
-            <p className="text-lg lg:text-4xl font-medium text-[#282828]">
+            <p className="text-lg font-medium text-[#282828] lg:text-4xl">
               Insights of our website
             </p>
-            <p className="text-sm lg:text-base font-normal text-[#909090]">
+            <p className="text-sm font-normal text-[#909090] lg:text-base">
               Tempor id eu nisl nunc mi. Sit amet adipiscing elit duis
               tristique. Ut tristique etegestas quis ipsum suspendisse ultrices
               gravida. Ac feugiat sed lectus vestibulum..
@@ -156,7 +156,7 @@ function Home() {
         </div>
         {/* Summary */}
         <div>
-          <p className="text-xl lg:text-4xl font-medium text-[#282828] py-5">
+          <p className="py-5 text-xl font-medium text-[#282828] lg:text-4xl">
             Summary
           </p>
           <Image
@@ -169,18 +169,18 @@ function Home() {
         </div>
 
         {/* Testimonials */}
-        <div className="p-8">
-          <p className="text-base font-medium text-center mt-8 text-[#282828]">
+        <div className="py-8">
+          <p className="mt-8 text-center text-base font-medium text-[#282828]">
             Testimonials
           </p>
-          <p className="text-[#282828] text-center font-bold">
+          <p className="text-center font-bold text-[#282828]">
             What our Happy Users are saying
           </p>
 
-          <div className="flex flex-col md:flex-row md:space-x-4 md:px-4">
-            <div className="p-4 bg-i-secondary-700 relative mt-10 rounded-br-[3rem]">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absolute  top-[-1.70rem]"></div>
-              <div className="inline-flex space-x-2 mt-5">
+          <div className="flex flex-col md:flex-row md:space-x-4">
+            <div className="relative mt-10 rounded-br-[3rem] bg-i-secondary-700 p-4">
+              <div className="absolute top-[-1.70rem] h-12 w-12 rounded-full  bg-i-secondary-400"></div>
+              <div className="mt-5 inline-flex space-x-2">
                 {[1, 1, 1, 1, 1].map((item, i) => (
                   <Image
                     key={i}
@@ -191,13 +191,13 @@ function Home() {
                   />
                 ))}
               </div>
-              <p className="text-xs mt-2">
+              <p className="mt-2 text-xs">
                 Tempor id eu nisl nunc mi. Sit amet adipiscingelit duis
                 tristique. Ut tristique etegestas quisipsum suspendisse ultrices
                 gravida. Ac feugiatsed lectus vestibulum..
               </p>
 
-              <div className="inline-flex space-x-2 items-center mt-4">
+              <div className="mt-4 inline-flex items-center space-x-2">
                 <Image
                   src="/img/avatar1.png"
                   width="40"
@@ -211,9 +211,9 @@ function Home() {
               </div>
             </div>
 
-            <div className="p-4 bg-i-secondary-700 relative mt-10 rounded-br-[3rem]">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absolute  top-[-1.70rem]"></div>
-              <div className="inline-flex space-x-2 mt-5">
+            <div className="relative mt-10 rounded-br-[3rem] bg-i-secondary-700 p-4">
+              <div className="absolute top-[-1.70rem] h-12 w-12 rounded-full  bg-i-secondary-400"></div>
+              <div className="mt-5 inline-flex space-x-2">
                 {[1, 1, 1, 1].map((item, i) => (
                   <Image
                     key={i}
@@ -230,13 +230,13 @@ function Home() {
                   alt="yellow rating"
                 />
               </div>
-              <p className="text-xs mt-2">
+              <p className="mt-2 text-xs">
                 Tempor id eu nisl nunc mi. Sit amet adipiscingelit duis
                 tristique. Ut tristique etegestas quisipsum suspendisse ultrices
                 gravida. Ac feugiatsed lectus vestibulum..
               </p>
 
-              <div className="inline-flex space-x-2 items-center mt-4">
+              <div className="mt-4 inline-flex items-center space-x-2">
                 <Image
                   src="/img/avatar2.png"
                   width="40"
@@ -249,10 +249,10 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="p-4 bg-i-secondary-700 relative mt-10 rounded-br-[3rem]">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absolute  top-[-1.70rem]"></div>
-              <div className="inline-flex space-x-2 mt-5">
-                <div className="inline-flex space-x-2 mt-5">
+            <div className="relative mt-10 rounded-br-[3rem] bg-i-secondary-700 p-4">
+              <div className="absolute top-[-1.70rem] h-12 w-12 rounded-full  bg-i-secondary-400"></div>
+              <div className="mt-5 inline-flex space-x-2">
+                <div className="mt-5 inline-flex space-x-2">
                   {[1, 1, 1, 1].map((item, i) => (
                     <Image
                       key={i}
@@ -270,13 +270,13 @@ function Home() {
                   />
                 </div>
               </div>
-              <p className="text-xs mt-2">
+              <p className="mt-2 text-xs">
                 Tempor id eu nisl nunc mi. Sit amet adipiscingelit duis
                 tristique. Ut tristique etegestas quisipsum suspendisse ultrices
                 gravida. Ac feugiatsed lectus vestibulum..
               </p>
 
-              <div className="inline-flex space-x-2 items-center mt-4">
+              <div className="mt-4 inline-flex items-center space-x-2">
                 <Image
                   src="/img/avatar3.png"
                   width="40"
@@ -293,31 +293,31 @@ function Home() {
         </div>
 
         {/* How To Invest */}
-        <div className="mx-auto w-full max-w-7xl p-4">
-          <p className="text-[#282828] text-center font-bold">
+        <div className="mx-auto w-full max-w-7xl">
+          <p className="text-center font-bold text-[#282828]">
             What our Happy Users are saying
           </p>
-          <div className="grid gap-4 h-[300px] lg:h-56 justify-items-center grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 mt-5">
-            <div className="w-full h-full bg-i-secondary-700 relative">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
+          <div className="mt-5 grid h-[300px] grid-cols-2 grid-rows-2 justify-items-center gap-4 lg:h-56 lg:grid-cols-4 lg:grid-rows-1">
+            <div className="relative h-full w-full bg-i-secondary-700">
+              <div className="absoluten left-0 top-0 m-2 flex h-12 w-12 items-center justify-center rounded-full bg-i-secondary-400 text-lg font-bold">
                 <p>1</p>
               </div>
             </div>
 
-            <div className="w-full h-full bg-i-secondary-700 relative">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
+            <div className="relative h-full w-full bg-i-secondary-700">
+              <div className="absoluten left-0 top-0 m-2 flex h-12 w-12 items-center justify-center rounded-full bg-i-secondary-400 text-lg font-bold">
                 <p>2</p>
               </div>
             </div>
 
-            <div className="w-full h-full bg-i-secondary-700 relative">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
+            <div className="relative h-full w-full bg-i-secondary-700">
+              <div className="absoluten left-0 top-0 m-2 flex h-12 w-12 items-center justify-center rounded-full bg-i-secondary-400 text-lg font-bold">
                 <p>3</p>
               </div>
             </div>
 
-            <div className="w-full h-full bg-i-secondary-700 relative">
-              <div className="w-12 h-12 rounded-full bg-i-secondary-400 absoluten left-0 top-0 m-2 flex justify-center items-center text-lg font-bold">
+            <div className="relative h-full w-full bg-i-secondary-700">
+              <div className="absoluten left-0 top-0 m-2 flex h-12 w-12 items-center justify-center rounded-full bg-i-secondary-400 text-lg font-bold">
                 <p>4</p>
               </div>
             </div>
@@ -326,8 +326,8 @@ function Home() {
       </div>
 
       {/*  Get Started */}
-      <div className='w-full flex relative mt-5'>
-        <div className='hidden md:block'>
+      <div className="relative mx-auto mt-5 w-full">
+        <div className="hidden md:block">
           <Image
             src="/img/getstartedlg.png"
             width="1440"
@@ -336,8 +336,7 @@ function Home() {
           />
         </div>
 
-        <div className='md:hidden'
-        >
+        <div className="md:hidden">
           <Image
             src="/img/getstartedsm.png"
             width="428"
@@ -346,8 +345,8 @@ function Home() {
           />
         </div>
 
-        <div className='absolute bottom-5 left-0 right-0'>
-          <div className='w-full flex justify-center items-center'>
+        <div className="absolute bottom-5 left-0 right-0">
+          <div className="flex w-full items-center justify-center">
             <button className="btn-accent btn rounded-full px-8 py-2 font-bold normal-case">
               Get Started
             </button>
@@ -356,18 +355,22 @@ function Home() {
       </div>
 
       {/* News Letter */}
-      <div className="mx-auto w-full max-w-6xl p-4 mt-8">
-        <p className="text-[#282828] text-center font-bold ">
-          Our Newsletter
-        </p>
-        <div className=' bg-i-secondary-700 p-6 md:p-20 mt-2 '>
-          <div className='flex flex-col lg:flex-row space-y-4'>
-            <div className='md:px-14 lg:basis-4/6'>
-              <p className='text-xl md:text-4xl font-bold'>Stay Updated with our weekly Newsletter</p>
-              <p className='text-xs mt-2'>Tempor id eu nisl nunc mi. Sit amet consectetur adipiscing elit duis tristique. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Ac feugiat sed lectus vestibulum. </p>
+      <div className="mx-auto mt-8 w-full max-w-6xl p-4 xl:p-0">
+        <p className="text-center font-bold text-[#282828] ">Our Newsletter</p>
+        <div className=" mt-2 bg-i-secondary-700 p-6 md:p-20 ">
+          <div className="flex flex-col space-y-4 lg:flex-row">
+            <div className="md:px-14 lg:basis-4/6">
+              <p className="text-xl font-bold md:text-4xl">
+                Stay Updated with our weekly Newsletter
+              </p>
+              <p className="mt-2 text-xs">
+                Tempor id eu nisl nunc mi. Sit amet consectetur adipiscing elit
+                duis tristique. Ut tristique et egestas quis ipsum suspendisse
+                ultrices gravida. Ac feugiat sed lectus vestibulum.{' '}
+              </p>
             </div>
 
-            <div className='flex flex-col space-y-4 mt-4 lg:basis-2/6'>
+            <div className="flex flex-col space-y-4 pt-8 lg:basis-2/6 lg:pt-0">
               <input
                 type="text"
                 className="input-secondary input w-full border-white text-black"
@@ -375,74 +378,6 @@ function Home() {
               <button className="btn-accent btn px-8 py-2 text-base font-bold normal-case ">
                 Subscribe
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='w-full flex relative mt-5 bg-i-secondary-900'>
-        <div className="mx-auto w-full max-w-6xl p-4 mt-8">
-
-          <div className='grid grid-cols-2 grid-rows-2 gap-4 lg:grid-cols-4 lg:rows-1 justify-items-center'>
-            <div className='flex flex-col space-y-2 max-w-[195px]'>
-              <div className="inline-flex  items-center font-medium">
-                <Image
-                  src="/logosm.png"
-                  width="32"
-                  height="32"
-                  alt="logo"
-                />
-                <p >
-                  <span className="text-accent">Pro</span>
-                  <span>Investors</span>
-                </p>
-
-              </div>
-              <p className='text-xs '>Promote cooperation and investment opportunities, Build connections andpromote success.</p>
-              <div className='inline-flex space-x-4 mt-4'>
-                <Image
-                  src="/img/ig.png"
-                  width="32"
-                  height="32"
-                  alt="ig logo"
-                />
-
-                <Image
-                  src="/img/youtube.png"
-                  width="44"
-                  height="27"
-                  alt="youtube logo"
-                />
-
-                <Image
-                  src="/img/fb.png"
-                  width="18"
-                  height="36"
-                  alt="facebook logo"
-                />
-              </div>
-            </div>
-
-            <div className='block space-y-2'>
-              <p className='font-bold text-2xl text-[#717171]'>For Investors</p>
-              <p className='text-lg'>Why Invest</p>
-              <p className='text-lg'>How It Works</p>
-              <p className='text-lg'>Risk</p>
-              <p className='text-lg'>FAQ</p>
-            </div>
-
-            <div className='block space-y-2'>
-              <p className='font-bold text-2xl text-[#717171]'>For Business Owners</p>
-              <p className='text-lg'>Why Raise</p>
-              <p className='text-lg'>Learn</p>
-              <p className='text-lg'>FAQ</p>
-            </div>
-
-            <div className='block space-y-2'>
-              <p className='font-bold text-2xl text-[#717171]'>About Us</p>
-              <p className='text-lg'>Privacy Policy</p>
-              <p className='text-lg'>Help And Support</p>
-              <p className='text-lg'>Terms And Conditions</p>
             </div>
           </div>
         </div>

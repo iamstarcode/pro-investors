@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Blissfull Cakes",
+    "discription": "Introducing Viatour: Igniting Your Adventurous Spirit, so come along with us as we explore together a beautiful Nigeria.",
+    "imgSrc": "/img/business/blissfull-cake.png",
+    "thumb": "/img/business/blissfull-cake-thumb.png",
+    "title": "Blissfull Bakes",
+    "subtitle": "Sweet Haven Bakery",
+    "investors": 5,
+    "min": "$10,000",
+    "raised": "$80,000"
+  }
+]

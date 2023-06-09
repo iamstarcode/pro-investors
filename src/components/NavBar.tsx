@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import CustomLink from "@/components/CustomLink";
-import Link from "next/link";
+import SignUpModal from "@/components/SigUpModal";
 import { useRef } from "react";
-import SignUp from "./SingUp";
+import { useDisclosure } from "@mantine/hooks";
 export const links = [
   {
     href: "/",
@@ -32,9 +32,13 @@ const NavBar = () => {
 
   const ref = useRef<HTMLDialogElement | null>(null)
 
+  const [opened, { open, close }] = useDisclosure(false);
+
+
   return (
     <>
-      <SignUp ref={ref} />
+
+      <SignUpModal opened={opened} open={open} close={close} />
 
       {/* <MenuDrawer /> */}
       <div id="nav" className="navbar">
@@ -47,7 +51,7 @@ const NavBar = () => {
               height="78"
               alt="logo"
             />
-            <p onClick={() => ref?.current?.showModal()}>
+            <p >
               <span className="text-accent text-lg lg:text-4xl">Pro</span>
               <span className="text-lg lg:text-4xl">Investors</span>
             </p>
@@ -60,7 +64,7 @@ const NavBar = () => {
             <div>
               {linksJsx}
             </div>
-            <button className="btn-accent btn px-8 py-2 font-bold normal-case">
+            <button onClick={open} className="btn-accent btn px-8 py-2 font-bold normal-case">
               Sign Up
             </button>
           </div>
@@ -86,10 +90,13 @@ const NavBar = () => {
               className="dropdown-content menu w-52 space-y-4 rounded-lg bg-i-secondary-300 p-2 py-4 text-sm shadow"
             >
               {linksJsx}
-              <li>
-                <Link className="px-8 py-2 font-bold" href="/sign-up">
+              <li onClick={open}>
+                <a className="px-8 py-2 font-bold">
                   Sign Up
-                </Link>
+                </a>
+                {/*  <Link className="px-8 py-2 font-bold" href="/sign-up">
+                  Sign Up
+                </Link> */}
               </li>
             </ul>
           </div>
