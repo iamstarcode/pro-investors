@@ -1,13 +1,23 @@
+import Header from '@/components/Header';
+import NavBar from '@/components/NavBar';
+import Footer from '@/partials/footer';
 import Image from 'next/image';
 
 function Home() {
   return (
     <>
+      <div className="min-h-16 bg-i-secondary">
+        <div className="mx-auto w-full max-w-7xl">
+          <NavBar />
+          <Header />
+        </div>
+      </div>
+
       <div className="mx-auto w-full max-w-7xl">
-        <p className="text-center text-xl font-bold text-[#282828] lg:text-4xl">
+        <p className=" pt-8 text-center text-xl font-bold text-[#282828] lg:text-4xl">
           Our Top Investors
         </p>
-        <div className="mt-8 flex flex-col space-y-7 p-4 lg:flex-row lg:space-x-10">
+        <div className=" mx-auto flex max-w-6xl flex-col space-y-7 p-8 lg:flex-row lg:space-x-10 lg:space-y-0">
           <div className="relative">
             <Image
               src="/img/investor1.png"
@@ -60,7 +70,7 @@ function Home() {
       </div>
 
       {/* Why Choose Us  */}
-      <div className="bg-i-secondary-500 pb-12 lg:pb-24">
+      <div className="bg-i-secondary-500 pb-12 lg:pb-24 xl:pb-32">
         <div className="mx-auto w-full max-w-7xl p-4">
           <p className=" py-8 text-center text-xl font-bold lg:text-4xl">
             Why Choose Us
@@ -68,14 +78,18 @@ function Home() {
 
           <div className="">
             <div className="flex w-full flex-col lg:relative">
-              <div className="flex basis-4/5 flex-col lg:relative lg:max-w-3xl">
-                <p className="bg-i-secondary-700 p-6 text-sm lg:py-36 lg:pr-52 xl:py-36 xl:pr-64 xl:text-lg">
-                  Tempor id eu nisl nunc mi. Sit consectetur adipiscing elit
-                  duis tristique. Ut tristique et egestas quis ipsum suspendisse
-                  ultrices gravida. Ac feugiat sed lectus vestibulum. Ornare
-                  quam viverra orci sagittis eu volutpat odio. Sed viverra
-                  tellus in hac habitasse platea dictumst rhoncus. Habitant
-                  morbi tristique senectus et netus et malesuada fames.
+              <div className="flex w-full flex-col lg:relative lg:max-w-2xl xl:max-w-[715px]">
+                <p className="bg-i-secondary-700 p-8 text-sm lg:py-28 lg:pr-52 xl:py-24 xl:pr-32 xl:text-lg">
+                  At Proinvestors, we understand that small businesses are the
+                  foundation of our economy and have tremendous potential. We
+                  know that many bright businesspeople find it difficult to
+                  obtain the finance they need to expand their operations and
+                  realize their aspirations. Many investors are searching for
+                  interesting investment opportunities that have the potential
+                  to produce high returns and boost the local economy. Our
+                  website links these two worlds by providing a safe and
+                  convenient setting for connecting and working with investors
+                  and business owners.
                 </p>
               </div>
               <div className="relative lg:absolute lg:right-0 lg:top-32 xl:right-0 xl:top-24">
@@ -88,7 +102,7 @@ function Home() {
                   />
                 </div>
                 <Image
-                  className="w-full lg:w-[430px] xl:w-[611px]"
+                  className="w-full lg:w-[490px] xl:w-[611px]"
                   src="/img/why1.png"
                   width="611"
                   height="400"
@@ -98,15 +112,16 @@ function Home() {
             </div>
 
             <div className="mt-8 flex w-full flex-col lg:relative lg:mt-32">
-              <div className="flex basis-4/5 flex-col lg:relative lg:max-w-3xl">
-                <p className="bg-i-secondary-700 p-6 text-sm lg:py-36 lg:pr-52 xl:py-36 xl:pr-64 xl:text-lg">
-                  Tempor id eu nisl nunc mi. Sit amet consectetur adipiscing
-                  elit duis tristique. Ut tristique et egestas quis ipsum
-                  suspendisse ultrices gravida. Ac feugiat sed lectus
-                  vestibulum. Ornare quam viverra orci sagittis eu volutpat
-                  odio. Sed viverra tellus in hac habitasse platea dictumst
-                  vestibulum rhoncus. Habitant morbi tristique senectus et netus
-                  et malesuada fames. Amet venenatis urna cursus eget nunc.
+              <div className="flex w-full flex-col lg:relative lg:max-w-2xl">
+                <p className="bg-i-secondary-700 p-6 text-sm lg:py-28 lg:pr-52 xl:py-24 xl:pr-32 xl:text-lg">
+                  We provide business owners with a special opportunity to
+                  highlight their endeavors and draw investment. Our website
+                  offers a thorough profilefor every business, enabling
+                  entrepreneurs to outline their goals, strategies for
+                  expansion, and financial projections to possible backers.
+                  Business owners can obtain the capital required to increase
+                  operations, create new products, or enter new markets by
+                  gaining access to our network of investors.
                 </p>
               </div>
               <div className="relative lg:absolute lg:right-0 lg:top-32 xl:right-0 xl:top-24">
@@ -119,7 +134,7 @@ function Home() {
                   />
                 </div>
                 <Image
-                  className="w-full lg:w-[430px] xl:w-[611px]"
+                  className="w-full lg:w-[490px] xl:w-[611px]"
                   src="/img/why2.png"
                   width="611"
                   height="400"
@@ -148,9 +163,9 @@ function Home() {
               Insights of our website
             </p>
             <p className="text-sm font-normal text-[#909090] lg:text-base">
-              Tempor id eu nisl nunc mi. Sit amet adipiscing elit duis
-              tristique. Ut tristique etegestas quis ipsum suspendisse ultrices
-              gravida. Ac feugiat sed lectus vestibulum..
+              Proinvestors is an innovative investment website that provides a
+              unique opportunity for investors to connect with and invest in
+              small business owners&apos; ventures.
             </p>
           </div>
         </div>
@@ -169,7 +184,7 @@ function Home() {
         </div>
 
         {/* Testimonials */}
-        <div className="py-8">
+        <div className="">
           <p className="mt-8 text-center text-base font-medium text-[#282828]">
             Testimonials
           </p>
@@ -177,8 +192,8 @@ function Home() {
             What our Happy Users are saying
           </p>
 
-          <div className="flex flex-col md:flex-row md:space-x-4">
-            <div className="relative mt-10 rounded-br-[3rem] bg-i-secondary-700 p-4">
+          <div className="flex flex-col space-y-14 md:space-y-0 p-8 md:flex-row md:space-x-4">
+            <div className="relative rounded-br-[3rem] bg-i-secondary-700 p-4">
               <div className="absolute top-[-1.70rem] h-12 w-12 rounded-full  bg-i-secondary-400"></div>
               <div className="mt-5 inline-flex space-x-2">
                 {[1, 1, 1, 1, 1].map((item, i) => (
@@ -192,9 +207,10 @@ function Home() {
                 ))}
               </div>
               <p className="mt-2 text-xs">
-                Tempor id eu nisl nunc mi. Sit amet adipiscingelit duis
-                tristique. Ut tristique etegestas quisipsum suspendisse ultrices
-                gravida. Ac feugiatsed lectus vestibulum..
+                I&apos;ve been using this investment website for six months now
+                and i have had some great opportunities to invest in small
+                businesses. the platform is easy to use and provides all the
+                information i need to make informed decisions
               </p>
 
               <div className="mt-4 inline-flex items-center space-x-2">
@@ -205,13 +221,13 @@ function Home() {
                   alt="yellow rating"
                 />
                 <div className="block">
-                  <p className="text-sm font-medium">Daniel james</p>
+                  <p className="text-sm font-semibold">Richard james</p>
                   <p className="text-xs font-medium">CEO of Techub</p>
                 </div>
               </div>
             </div>
 
-            <div className="relative mt-10 rounded-br-[3rem] bg-i-secondary-700 p-4">
+            <div className="relative rounded-br-[3rem] bg-i-secondary-700 p-4">
               <div className="absolute top-[-1.70rem] h-12 w-12 rounded-full  bg-i-secondary-400"></div>
               <div className="mt-5 inline-flex space-x-2">
                 {[1, 1, 1, 1].map((item, i) => (
@@ -231,9 +247,10 @@ function Home() {
                 />
               </div>
               <p className="mt-2 text-xs">
-                Tempor id eu nisl nunc mi. Sit amet adipiscingelit duis
-                tristique. Ut tristique etegestas quisipsum suspendisse ultrices
-                gravida. Ac feugiatsed lectus vestibulum..
+                I was hesitant to use an investment website at first but the
+                support team was incredibly helpful and walked me through the
+                process. I ended upInvesting in a small bakeryand have been
+                thrilled to watch them grow and Expand offerings.
               </p>
 
               <div className="mt-4 inline-flex items-center space-x-2">
@@ -244,15 +261,15 @@ function Home() {
                   alt="yellow rating"
                 />
                 <div className="block">
-                  <p className="text-sm font-medium">Lois Kent</p>
-                  <p className="text-xs font-medium">CEO of Daily News</p>
+                  <p className="text-sm font-semibold">Mary John</p>
+                  <p className="text-xs font-medium">CEO of Passionate wears</p>
                 </div>
               </div>
             </div>
-            <div className="relative mt-10 rounded-br-[3rem] bg-i-secondary-700 p-4">
+            <div className="relative rounded-br-[3rem] bg-i-secondary-700 p-4">
               <div className="absolute top-[-1.70rem] h-12 w-12 rounded-full  bg-i-secondary-400"></div>
               <div className="mt-5 inline-flex space-x-2">
-                <div className="mt-5 inline-flex space-x-2">
+                <div className="inline-flex space-x-2">
                   {[1, 1, 1, 1].map((item, i) => (
                     <Image
                       key={i}
@@ -271,9 +288,10 @@ function Home() {
                 </div>
               </div>
               <p className="mt-2 text-xs">
-                Tempor id eu nisl nunc mi. Sit amet adipiscingelit duis
-                tristique. Ut tristique etegestas quisipsum suspendisse ultrices
-                gravida. Ac feugiatsed lectus vestibulum..
+                This investment website is a great way to support businesses and
+                also earn Reasonsible return on investment. I’ve invested in a
+                few different companies Have been impressed with the level of
+                communication and transparency Throughout the process.
               </p>
 
               <div className="mt-4 inline-flex items-center space-x-2">
@@ -284,8 +302,8 @@ function Home() {
                   alt="yellow rating"
                 />
                 <div className="block">
-                  <p className="text-sm font-medium">Bruce Wayne</p>
-                  <p className="text-xs font-medium">CEO of iTech</p>
+                  <p className="text-sm font-semibold">Bruce Wayne</p>
+                  <p className="text-xs font-medium">CEO of Vpad Technology</p>
                 </div>
               </div>
             </div>
@@ -294,9 +312,7 @@ function Home() {
 
         {/* How To Invest */}
         <div className="mx-auto w-full max-w-7xl">
-          <p className="text-center font-bold text-[#282828]">
-            What our Happy Users are saying
-          </p>
+          <p className="text-center font-bold text-[#282828]">How To Invest</p>
           <div className="mt-5 grid h-[300px] grid-cols-2 grid-rows-2 justify-items-center gap-4 lg:h-56 lg:grid-cols-4 lg:grid-rows-1">
             <div className="relative h-full w-full bg-i-secondary-700">
               <div className="absoluten left-0 top-0 m-2 flex h-12 w-12 items-center justify-center rounded-full bg-i-secondary-400 text-lg font-bold">
@@ -355,22 +371,22 @@ function Home() {
       </div>
 
       {/* News Letter */}
-      <div className="mx-auto mt-8 w-full max-w-6xl p-4 xl:p-0">
+      <div className="mx-auto mt-8 w-full max-w-7xl px-4 xl:py-12">
         <p className="text-center font-bold text-[#282828] ">Our Newsletter</p>
         <div className=" mt-2 bg-i-secondary-700 p-6 md:p-20 ">
           <div className="flex flex-col space-y-4 lg:flex-row">
             <div className="md:px-14 lg:basis-4/6">
-              <p className="text-xl font-bold md:text-4xl">
+              <p className="mt-8 text-xl font-bold md:text-4xl">
                 Stay Updated with our weekly Newsletter
               </p>
               <p className="mt-2 text-xs">
-                Tempor id eu nisl nunc mi. Sit amet consectetur adipiscing elit
-                duis tristique. Ut tristique et egestas quis ipsum suspendisse
-                ultrices gravida. Ac feugiat sed lectus vestibulum.{' '}
+                Get Exclusive News, Tips, and Opportunities from ProInvestors
+                Insider to Unlock Your Investment Potential with Our Exclusive
+                Newsletter!
               </p>
             </div>
 
-            <div className="flex flex-col space-y-4 pt-8 lg:basis-2/6 lg:pt-0">
+            <div className="flex flex-col space-y-4 pb-4 pt-8 lg:basis-2/6 lg:pt-0">
               <input
                 type="text"
                 className="input-secondary input w-full border-white text-black"
@@ -382,6 +398,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

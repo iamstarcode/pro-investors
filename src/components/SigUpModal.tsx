@@ -1,27 +1,28 @@
-
-import { useDisclosure, useToggle } from '@mantine/hooks';
-import { Modal, Button, Group, Tabs, ScrollArea } from '@mantine/core';
-
+import { useToggle } from '@mantine/hooks';
+import { Modal, Tabs } from '@mantine/core';
 
 type props = {
-    opened: boolean
-    close: () => void
-    open: () => void
-
-}
+    opened: boolean;
+    close: () => void;
+    open: () => void;
+};
 
 function SigUpModal({ opened, close, open }: props) {
-
-    const [value, toggle] = useToggle(['investor', 'biz'])
+    const [value, toggle] = useToggle(['investor', 'biz']);
 
     return (
         <>
-            <Modal size="lg" centered opened={opened} onClose={close} withCloseButton={true}>
-
+            <Modal
+                size="lg"
+                centered
+                opened={opened}
+                onClose={close}
+                withCloseButton={true}
+            >
                 <Tabs defaultValue="login">
-                    <Tabs.List position='center'>
-                        <Tabs.Tab value="login">Login</Tabs.Tab>
-                        <Tabs.Tab value="signup">Sign Up</Tabs.Tab>
+                    <Tabs.List position="center">
+                        <Tabs.Tab className='text-2xl lg:text-3xl' value="login">Login</Tabs.Tab>
+                        <Tabs.Tab className='text-2xl lg:text-3xl' value="signup">Sign Up</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="login">
@@ -48,7 +49,7 @@ function SigUpModal({ opened, close, open }: props) {
                                 />
                             </div>
 
-                            <button className="btn mt-5 bg-i-secondary-600 text-white w-full normal-case">
+                            <button className="btn mt-5 w-full bg-i-secondary-600 normal-case text-white">
                                 <svg
                                     className="h-6 w-6"
                                     viewBox="0 0 30 30"
@@ -79,39 +80,60 @@ function SigUpModal({ opened, close, open }: props) {
                                 Sign in with Google
                             </button>
 
-                            <button className="btn mt-2 bg-i-secondary-600 text-white w-full normal-case">
-                                <svg className="h-6 w-6" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z" fill="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2917 6C18.4487 7.06664 18.0145 8.1116 17.4418 8.85091C16.8291 9.64392 15.7729 10.2573 14.7496 10.2253C14.5628 9.20405 15.0411 8.15187 15.6231 7.44456C16.2615 6.66394 17.3556 6.06505 18.2917 6ZM21.3658 21.0133C21.8934 20.2048 22.0905 19.797 22.5 18.8842C19.5214 17.7514 19.0442 13.5169 21.9919 11.8916C21.0928 10.7641 19.8293 10.1105 18.6367 10.1105C17.7773 10.1105 17.1885 10.3347 16.6532 10.5386C16.2072 10.7085 15.7983 10.8642 15.3009 10.8642C14.7635 10.8642 14.2876 10.6936 13.7892 10.5149C13.2416 10.3186 12.667 10.1125 11.9539 10.1125C10.6155 10.1125 9.19087 10.9303 8.28765 12.3284C7.01801 14.2975 7.23458 17.9993 9.29351 21.1527C10.0294 22.2813 11.0127 23.5493 12.2988 23.5607C12.8324 23.566 13.1875 23.4067 13.5718 23.2343C14.0116 23.0371 14.4896 22.8226 15.3174 22.8182C16.15 22.8133 16.6205 23.0303 17.0545 23.2304C17.4289 23.4031 17.7761 23.5633 18.3052 23.5576C19.5923 23.5472 20.6299 22.1419 21.3658 21.0133Z" fill="#0B0B0A" />
+                            <button className="btn mt-2 w-full bg-i-secondary-600 normal-case text-white">
+                                <svg
+                                    className="h-6 w-6"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M18.2917 6C18.4487 7.06664 18.0145 8.1116 17.4418 8.85091C16.8291 9.64392 15.7729 10.2573 14.7496 10.2253C14.5628 9.20405 15.0411 8.15187 15.6231 7.44456C16.2615 6.66394 17.3556 6.06505 18.2917 6ZM21.3658 21.0133C21.8934 20.2048 22.0905 19.797 22.5 18.8842C19.5214 17.7514 19.0442 13.5169 21.9919 11.8916C21.0928 10.7641 19.8293 10.1105 18.6367 10.1105C17.7773 10.1105 17.1885 10.3347 16.6532 10.5386C16.2072 10.7085 15.7983 10.8642 15.3009 10.8642C14.7635 10.8642 14.2876 10.6936 13.7892 10.5149C13.2416 10.3186 12.667 10.1125 11.9539 10.1125C10.6155 10.1125 9.19087 10.9303 8.28765 12.3284C7.01801 14.2975 7.23458 17.9993 9.29351 21.1527C10.0294 22.2813 11.0127 23.5493 12.2988 23.5607C12.8324 23.566 13.1875 23.4067 13.5718 23.2343C14.0116 23.0371 14.4896 22.8226 15.3174 22.8182C16.15 22.8133 16.6205 23.0303 17.0545 23.2304C17.4289 23.4031 17.7761 23.5633 18.3052 23.5576C19.5923 23.5472 20.6299 22.1419 21.3658 21.0133Z"
+                                        fill="#0B0B0A"
+                                    />
                                 </svg>
-
                                 Sign in with Apple
                             </button>
 
-                            <button className="btn mt-2 bg-accent w-full font-bold normal-case">
+                            <button className="btn mt-2 w-full bg-accent font-bold normal-case">
                                 Sign in
                             </button>
 
-                            <p className='text-center mt-4 text-gray-400 max-w-xs mx-auto'>By signing in, I agree to ProInvestor&apos;s Terms, Conditions and Privacy Policy</p>
+                            <p className="mx-auto mt-4 max-w-xs text-center text-gray-400">
+                                By signing in, I agree to ProInvestor&apos;s Terms, Conditions
+                                and Privacy Policy
+                            </p>
                         </div>
-
                     </Tabs.Panel>
                     <Tabs.Panel value="signup">
 
-                        <div>
-
-                        </div>
-                        <div className="inline-flex w-full items-center mt-6">
-                            <button onClick={() => toggle("investor")} className={`btn flex-1 ${value == "investor" ? 'bg-i-secondary-600 text-white' : ''} px-8 text-sm font-bold normal-case`}>
+                        <div className="mt-6 w-full items-center space-y-2 md:inline-flex md:space-y-0">
+                            <button
+                                onClick={() => toggle('investor')}
+                                className={`btn flex-1 ${value == 'investor' ? 'bg-i-secondary-600 text-white' : ''
+                                    } w-full px-8 text-sm font-bold normal-case`}
+                            >
                                 Investor
                             </button>
-                            <p className="px-5">OR</p>
-                            <button onClick={() => toggle("biz")} className={`btn flex-1 ${value == "biz" ? 'bg-i-secondary-600  text-white' : ''} px-8 text-sm font-bold normal-case`}>
+                            <p className="px-5 text-center">OR</p>
+                            <button
+                                onClick={() => toggle('biz')}
+                                className={`btn flex-1 ${value == 'biz' ? 'bg-i-secondary-600  text-white' : ''
+                                    } w-full px-8 text-sm font-bold normal-case`}
+                            >
                                 Bussines Owner
                             </button>
                         </div>
 
-                        <div className="inline-flex flex-wrap space-x-0 md:flex-nowrap w-full md:space-x-2">
+                        <div className="inline-flex w-full flex-wrap space-x-0 md:flex-nowrap md:space-x-2">
                             <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">Full Name</span>
@@ -156,16 +178,21 @@ function SigUpModal({ opened, close, open }: props) {
                             />
                         </div>
 
-                        {value == "biz" && <div className="form-control w-full">
-                            <label className="label">
-                                <span className="label-text"> Website or Social Media Link</span>
-                            </label>
-                            <input
-                                type="text"
-                                placeholder="Type here"
-                                className="input-bordered input w-full "
-                            />
-                        </div>}
+                        {value == 'biz' && (
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text">
+                                        {' '}
+                                        Website or Social Media Link
+                                    </span>
+                                </label>
+                                <input
+                                    type="text"
+                                    placeholder="Type here"
+                                    className="input-bordered input w-full "
+                                />
+                            </div>
+                        )}
 
                         <button className="btn mt-5 w-full normal-case">
                             <svg
@@ -198,27 +225,42 @@ function SigUpModal({ opened, close, open }: props) {
                             Sign up with Google
                         </button>
 
-                        <button className="btn mt-2 bg-i-secondary-600 text-white w-full normal-case">
-                            <svg className="h-6 w-6" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z" fill="white" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2917 6C18.4487 7.06664 18.0145 8.1116 17.4418 8.85091C16.8291 9.64392 15.7729 10.2573 14.7496 10.2253C14.5628 9.20405 15.0411 8.15187 15.6231 7.44456C16.2615 6.66394 17.3556 6.06505 18.2917 6ZM21.3658 21.0133C21.8934 20.2048 22.0905 19.797 22.5 18.8842C19.5214 17.7514 19.0442 13.5169 21.9919 11.8916C21.0928 10.7641 19.8293 10.1105 18.6367 10.1105C17.7773 10.1105 17.1885 10.3347 16.6532 10.5386C16.2072 10.7085 15.7983 10.8642 15.3009 10.8642C14.7635 10.8642 14.2876 10.6936 13.7892 10.5149C13.2416 10.3186 12.667 10.1125 11.9539 10.1125C10.6155 10.1125 9.19087 10.9303 8.28765 12.3284C7.01801 14.2975 7.23458 17.9993 9.29351 21.1527C10.0294 22.2813 11.0127 23.5493 12.2988 23.5607C12.8324 23.566 13.1875 23.4067 13.5718 23.2343C14.0116 23.0371 14.4896 22.8226 15.3174 22.8182C16.15 22.8133 16.6205 23.0303 17.0545 23.2304C17.4289 23.4031 17.7761 23.5633 18.3052 23.5576C19.5923 23.5472 20.6299 22.1419 21.3658 21.0133Z" fill="#0B0B0A" />
+                        <button className="btn mt-2 w-full bg-i-secondary-600 normal-case text-white">
+                            <svg
+                                className="h-6 w-6"
+                                width="30"
+                                height="30"
+                                viewBox="0 0 30 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z"
+                                    fill="white"
+                                />
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M18.2917 6C18.4487 7.06664 18.0145 8.1116 17.4418 8.85091C16.8291 9.64392 15.7729 10.2573 14.7496 10.2253C14.5628 9.20405 15.0411 8.15187 15.6231 7.44456C16.2615 6.66394 17.3556 6.06505 18.2917 6ZM21.3658 21.0133C21.8934 20.2048 22.0905 19.797 22.5 18.8842C19.5214 17.7514 19.0442 13.5169 21.9919 11.8916C21.0928 10.7641 19.8293 10.1105 18.6367 10.1105C17.7773 10.1105 17.1885 10.3347 16.6532 10.5386C16.2072 10.7085 15.7983 10.8642 15.3009 10.8642C14.7635 10.8642 14.2876 10.6936 13.7892 10.5149C13.2416 10.3186 12.667 10.1125 11.9539 10.1125C10.6155 10.1125 9.19087 10.9303 8.28765 12.3284C7.01801 14.2975 7.23458 17.9993 9.29351 21.1527C10.0294 22.2813 11.0127 23.5493 12.2988 23.5607C12.8324 23.566 13.1875 23.4067 13.5718 23.2343C14.0116 23.0371 14.4896 22.8226 15.3174 22.8182C16.15 22.8133 16.6205 23.0303 17.0545 23.2304C17.4289 23.4031 17.7761 23.5633 18.3052 23.5576C19.5923 23.5472 20.6299 22.1419 21.3658 21.0133Z"
+                                    fill="#0B0B0A"
+                                />
                             </svg>
-
                             Sign in with Apple
                         </button>
 
-                        <button className="btn mt-2 bg-accent w-full font-bold normal-case">
+                        <button className="btn mt-2 w-full bg-accent font-bold normal-case">
                             Sign in
                         </button>
 
-                        <p className='text-center mt-4 text-gray-400 max-w-xs mx-auto'>By signing in, I agree to ProInvestor&apos;s Terms, Conditions and Privacy Policy</p>
+                        <p className="mx-auto mt-4 max-w-xs text-center text-gray-400">
+                            By signing in, I agree to ProInvestor&apos;s Terms, Conditions and
+                            Privacy Policy
+                        </p>
                     </Tabs.Panel>
-
                 </Tabs>
             </Modal>
-
         </>
     );
 }
 
-export default SigUpModal
+export default SigUpModal;

@@ -1,10 +1,17 @@
 import Image from 'next/image';
+import localFont from 'next/font/local';
+
+const myFont = localFont({
+  src: '../../public/fonts/futur.ttf',
+  // src: '../../public/fonts/Futura-Bold-font.ttf',
+});
+
 
 function Header() {
   const HeaderBg = () => (
     <Image
       className="m-0 p-0"
-      src="/img/header-bg.png"
+      src="/img/header-bg-sm.png"
       width="736"
       height="500"
       alt="header image"
@@ -13,13 +20,13 @@ function Header() {
 
   return (
     <div className="block p-4 lg:mt-8">
-      <div className="flex space-x-10 lg:flex-row">
+      <div className="flex flex-col lg:space-x-24 lg:flex-row">
         <div id="left" className="flex flex-col space-y-8 lg:basis-1/2">
           <div className="space-y-3">
-            <p className="text-lg font-bold lg:text-4xl">
+            <h2 className="text-xl font-bold lg:text-4xl">
               Unlock Growth Potential: Connect with Small-Budget Investors to
               Fuel Your Business&apos;s Success.
-            </p>
+            </h2>
             <p className="text-sm lg:text-lg">
               Our website promotes growth potential by connecting small business
               owners with low-cost investors. Promote cooperation and
@@ -44,16 +51,16 @@ function Header() {
 
           <div className="flex justify-between">
             <div className="block">
-              <p className="text-2xl font-bold lg:text-4xl">200+</p>
+              <p className={`${myFont.className} text-2xl font-bold lg:text-4xl`}>200+</p>
               <p className="text-sm lg:text-xl">Investors</p>
             </div>
 
             <div className="block">
-              <p className="text-2xl font-bold lg:text-4xl">$100M</p>
+              <p className={`${myFont.className} text-2xl font-bold lg:text-4xl`}>$100M</p>
               <p className="text-sm lg:text-xl">Funds deployed</p>
             </div>
             <div className="block">
-              <p className="text-2xl font-bold lg:text-4xl">500+</p>
+              <p className={`${myFont.className} text-2xl font-bold lg:text-4xl`}>500+</p>
               <p className="text-sm lg:text-xl">Business owners</p>
             </div>
           </div>

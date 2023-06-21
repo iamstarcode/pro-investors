@@ -21,7 +21,7 @@ const CustomLink = ({ href, text }: { href: string; text: string }) => {
   return (
 
     <Link
-      className={`${pathName === href ? 'font-semibold' : ''} px-4 py-2 text-lg no-underline text-grey-darkest hover:text-i-secondary-400 ml-6`}
+      className={`${pathName === href ? 'font-semibold text-accent' : ''} px-0 md:px-4 py-2 text-lg no-underline text-grey-darkest hover:text-i-secondary-400 ml-6`}
       href={href}
     >
       {text}

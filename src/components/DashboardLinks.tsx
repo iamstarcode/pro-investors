@@ -1,16 +1,34 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { useViewportSize } from '@mantine/hooks';
-import { useEffect } from 'react';
 
 export const links = [
     {
         href: '/dashboard',
         text: 'Dashboard',
         imageSrc: '/icons/wallet.svg',
+    },
+    {
+        href: '/porfolio',
+        text: 'Portfolio',
+        imageSrc: '/icons/portfolio.png',
+    },
+    {
+        href: '/community',
+        text: 'Community',
+        imageSrc: '/icons/community.png',
+    },
+    {
+        href: '/news',
+        text: 'News',
+        imageSrc: '/icons/news.png',
+    },
+    {
+        href: '/settings',
+        text: 'Settings',
+        imageSrc: '/icons/settings.png',
     },
 ];
 const DashboardLinks = ({
@@ -27,9 +45,9 @@ const DashboardLinks = ({
     return (
         <li>
             <Link
-                className={`${pathName === href
-                    ? 'rounded-full bg-accent font-semibold text-black'
-                    : ''
+                className={`${href === '/dashboard'
+                        ? 'rounded-full bg-accent font-semibold text-black'
+                        : ''
                     } text-grey-darkest px-4 py-2 text-lg no-underline hover:text-i-secondary-400`}
                 href={href}
             >

@@ -1,108 +1,21 @@
 import BusinessCard, { BusinessCardProps } from '@/components/BusinessCard';
+import { BusinessCardType } from '@/types';
+import data from '@/data/business.json';
 
 function Dashboard() {
   const business: BusinessCardProps[] = [
-    {
-      id: "1",
-      imgSrc: '/img/business/blissfull-cake.png',
-      title: 'Blissfull Bakes',
-      subtitle: 'Sweet Haven Bakery',
-      investors: 5,
-      min: '$10,000',
-      raised: '$80,000',
-    },
-
-    {
-      id: "2",
-      imgSrc: '/img/business/tech-ease.png',
-      title: 'TechEase Solutions',
-      subtitle: 'TechHub Solutions',
-      investors: 10,
-      min: '$10,000',
-      raised: '$90,000',
-    },
-
-    {
-      id: "1",
-      imgSrc: '/img/business/blissfull-cake.png',
-      title: 'Blissfull Bakes',
-      subtitle: 'Sweet Haven Bakery',
-      investors: 5,
-      min: '$10,000',
-      raised: '$80,000',
-    },
-
-    {
-      id: "2",
-      imgSrc: '/img/business/tech-ease.png',
-      title: 'TechEase Solutions',
-      subtitle: 'TechHub Solutions',
-      investors: 10,
-      min: '$10,000',
-      raised: '$90,000',
-    }, {
-      id: "1",
-      imgSrc: '/img/business/blissfull-cake.png',
-      title: 'Blissfull Bakes',
-      subtitle: 'Sweet Haven Bakery',
-      investors: 5,
-      min: '$10,000',
-      raised: '$80,000',
-    },
-
-    {
-      id: "2",
-      imgSrc: '/img/business/tech-ease.png',
-      title: 'TechEase Solutions',
-      subtitle: 'TechHub Solutions',
-      investors: 10,
-      min: '$10,000',
-      raised: '$90,000',
-    }, {
-      id: "1",
-      imgSrc: '/img/business/blissfull-cake.png',
-      title: 'Blissfull Bakes',
-      subtitle: 'Sweet Haven Bakery',
-      investors: 5,
-      min: '$10,000',
-      raised: '$80,000',
-    },
-
-    {
-      id: "2",
-      imgSrc: '/img/business/tech-ease.png',
-      title: 'TechEase Solutions',
-      subtitle: 'TechHub Solutions',
-      investors: 10,
-      min: '$10,000',
-      raised: '$90,000',
-    }, {
-      id: "1",
-      imgSrc: '/img/business/blissfull-cake.png',
-      title: 'Blissfull Bakes',
-      subtitle: 'Sweet Haven Bakery',
-      investors: 5,
-      min: '$10,000',
-      raised: '$80,000',
-    },
-
-    {
-      id: "2",
-      imgSrc: '/img/business/tech-ease.png',
-      title: 'TechEase Solutions',
-      subtitle: 'TechHub Solutions',
-      investors: 10,
-      min: '$10,000',
-      raised: '$90,000',
-    },
+    ...JSON.parse(JSON.stringify(data)),
+    ...JSON.parse(JSON.stringify(data)),
+    ...JSON.parse(JSON.stringify(data)),
   ];
+
   return (
     <>
       <div className="mt-5 px-4 py-4">
         <p className="text-lg font-bold lg:text-4xl">
           Investment opportunities on Proinvestor.
         </p>
-        <p className="mt-2 text-xs text-gray-500 lg:text-lg">
+        <p className="mt-2 text-xs text-gray-500 lg:text-lg max-w-md">
           Explore current investment opportunities on Proinvestor. All companies
           are vetted and pass due diligence.
         </p>
@@ -118,6 +31,7 @@ function Dashboard() {
         <div className="scrollbar flex space-x-3 overflow-x-scroll">
           {business.map((item: BusinessCardProps, index: number) => (
             <BusinessCard
+              id={item.id}
               key={index}
               imgSrc={item.imgSrc}
               title={item.title}
@@ -143,6 +57,7 @@ function Dashboard() {
             <div className="scrollbar flex space-x-3 overflow-x-scroll">
               {business.map((item: BusinessCardProps, index: number) => (
                 <BusinessCard
+                  id={item.id}
                   key={index}
                   imgSrc={item.imgSrc}
                   title={item.title}
@@ -170,6 +85,7 @@ function Dashboard() {
             <div className="scrollbar flex space-x-3 overflow-x-scroll">
               {business.map((item: BusinessCardProps, index: number) => (
                 <BusinessCard
+                  id={item.id}
                   key={index}
                   imgSrc={item.imgSrc}
                   title={item.title}
@@ -184,7 +100,7 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="px-4 py-4">
+      <div className="px-4 pt-4">
         <div className="mt-5 flex items-center justify-between">
           <p className="text-lg font-bold lg:text-2xl">Transactions</p>
           <p className="text-sm font-bold">See All</p>
