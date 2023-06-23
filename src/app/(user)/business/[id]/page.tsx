@@ -32,7 +32,7 @@ function Page({ params }: { params: { id: string } }) {
                         src={biz?.thumb ?? ''}
                         width="40"
                         height="40"
-                        alt="google icon"
+                        alt="bliss icon"
                     />
                     <div>
                         <h2 className="text-base font-bold lg:text-4xl">{biz?.name}</h2>

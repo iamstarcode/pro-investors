@@ -68,7 +68,7 @@ const NavBar = () => {
               Sign Up
             </button>
           </div>
-          <div className="dropdown-end dropdown lg:hidden">
+          <div className="z-50 dropdown-end dropdown lg:hidden">
             <label tabIndex={0} className="btn-ghost btn-circle btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
